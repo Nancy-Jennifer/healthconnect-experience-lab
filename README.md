@@ -8,6 +8,8 @@
 **Professional Focus:** Performance & Decision Intelligence Analyst  
 **Project Status:** Week 4 — Analytical Foundation Completed
 
+*This repository is a work in progress and will be progressively updated as the HealthConnect Experience Lab advances through subsequent project stages.*
+
 ---
 
 ## 1. Project Overview
@@ -321,23 +323,3 @@ The notebook validates dataset structure, data types, missing values, identifier
 
 ---
 
-## 17. Repository Structure
-
-```text
-healthconnect-experience-lab/
-│
-├── README.md
-│
-├── week-4/
-│   │
-│   ├── reports/
-│   │   ├── WK4_HealthConnect_Initial_Analysis_Document_...
-│   │   ├── WK4_HealthConnect_Project_Summary_...
-│   │   └── WK4_HealthConnect_Hybrid_Documentation_Approach_...
-│   │
-│   └── notebooks/
-│       ├── WK4_HealthConnect_Technical_Data_Inspection_Notebook_....ipynb
-│       └── WK4_HealthConnect_Technical_Data_Inspection_Notebook_....pdf
-│
-└── future-weeks/
-    └── Project development will be added progressively
