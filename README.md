@@ -315,11 +315,11 @@ The notebook validates dataset structure, data types, missing values, identifier
 
 | Deliverable | Role |
 |---|---|
-| **Initial Analysis Document** | Main Data Analytics Week 4 analytical output |
-| **Technical Data Inspection Notebook (.ipynb)** | Reproducible supporting technical evidence |
-| **Technical Data Inspection Notebook (.pdf)** | Readable notebook export |
-| **Week 4 Project Summary** | Concise project foundation summary |
-| **Hybrid Documentation Approach** | Documentation architecture and traceability framework |
+| **[Initial Analysis Document](reports/WK4_HealthConnect_Initial_Analysis_Document_Nancy_Lee_YIMBERE_ALAPINI.pdf)** | Main Data Analytics Week 4 analytical output |
+| **[Technical Data Inspection Notebook (.ipynb)](notebooks/WK4_HealthConnect_Technical_Data_Inspection_Notebook_Nancy_Lee_YIMBERE_ALAPINI.ipynb)** | Reproducible supporting technical evidence |
+| **[Technical Data Inspection Notebook (.pdf)](notebooks/WK4_HealthConnect_Technical_Data_Inspection_Notebook_Nancy_Lee_YIMBERE_ALAPINI.pdf)** | Readable notebook export |
+| **[Week 4 Project Summary](reports/WK4_HealthConnect_Project_Summary_Nancy_Lee_YIMBERE_ALAPINI.pdf)** | Concise project foundation summary |
+
 
 ---
 
