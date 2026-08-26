@@ -1,6 +1,6 @@
 # HealthConnect Experience Lab
 
-## Improving Patient Appointment Attendance and Healthcare Support Using Data and AI | Data Analytics Track
+## Improving Patient Appointment Attendance and Healthcare Support Using Data and AI
 
 **Data Analytics Track | AnalystLab Africa Internship Programme**
 
