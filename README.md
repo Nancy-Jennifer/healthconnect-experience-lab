@@ -1,20 +1,18 @@
-# HealthConnect Experience Lab
+HealthConnect Experience Lab
 
-## Improving Patient Appointment Attendance and Healthcare Support Using Data and AI
+Improving Patient Appointment Attendance and Healthcare Support Using Data and AI
 
-**Data Analytics Track | AnalystLab Africa Internship Programme**
+Data Analytics Track | AnalystLab Africa Internship Programme
 
-**Author:** Nancy Lee YIMBERE ALAPINI  
-**Professional Focus:** Performance & Decision Intelligence Analyst  
-**Project Status:** Week 4 — Analytical Foundation Completed
+Author: Nancy Lee YIMBERE ALAPINI
+Professional Focus: Performance & Decision Intelligence Analyst
+Project Status: Week 5 — Analytics Development & Initial Implementation Completed
 
-*This repository is a work in progress and will be progressively updated as the HealthConnect Experience Lab advances through subsequent project stages.*
+This repository documents the progressive development of the HealthConnect Experience Lab, from analytical foundation to evidence-based decision support.
 
----
+1. Project Overview
 
-## 1. Project Overview
-
-The **HealthConnect Experience Lab** is a multidisciplinary project developed as part of the AnalystLab Africa Internship Programme.
+The HealthConnect Experience Lab is a multidisciplinary project developed as part of the AnalystLab Africa Internship Programme.
 
 From Week 4 onward, interns across Data Analytics, Data Science, Machine Learning Engineering, Generative AI, and Project Management contribute to a shared healthcare business problem from their respective professional perspectives.
 
@@ -22,304 +20,554 @@ HealthConnect Clinic faces challenges related to missed appointments, cancellati
 
 The broader project question is:
 
-> **How can HealthConnect Clinic use data and AI to reduce missed appointments and improve the patient support experience?**
+How can HealthConnect Clinic use data and AI to reduce missed appointments and improve the patient support experience?
 
-For the **Data Analytics Track**, the focus is to understand the appointment data and determine how it can be used to investigate appointment attendance and no-show patterns.
+For the Data Analytics Track, the objective is to use appointment-level data to understand attendance and no-show patterns, evaluate relevant analytical hypotheses, develop decision-relevant KPIs, and translate validated evidence into actionable priorities.
 
----
+2. Quick Navigation & Week 5 Deliverables
 
-## 2. Project Continuity
+📊 Power BI Dashboard
 
-The HealthConnect Experience Lab is a **progressive multi-week project**.
+01 | MONITOR · 02 | DIAGNOSE · 03 | PRIORITIZE
 
-Each subsequent internship stage will build on the analytical foundation established during Week 4.
+📦 Week 5 Deliverables
 
-The overall project journey is expected to progress through:
+The Week 5 deliverables are stored in the notebooks, dashboards, and reports folders.
 
-**Problem Understanding → Analysis & Solution Design → Development → Testing & Refinement → Final Presentation**
+Deliverable
 
-This repository will therefore be updated progressively as the project advances.
+WK5_HealthConnect_Analytics_Nancy_Lee_YIMBERE_ALAPINI.ipynb
 
----
+WK5_HealthConnect_Analytics_Dashboard_Nancy_Lee_YIMBERE_ALAPINI.pbix
 
-# WEEK 4 — ANALYTICAL FOUNDATION
+WK5_HealthConnect_Business_Insights_Recommendations_Nancy_Lee_YIMBERE_ALAPINI.pdf
 
-## 3. Week 4 Objective
+WK5_HealthConnect_Project_Summary_Nancy_Lee_YIMBERE_ALAPINI.pdf
 
-Week 4 focuses on **understanding, reviewing, defining, and planning** rather than executing the full analysis.
+Project Journey
 
-The Data Analytics objective is to:
+Week 4 — Analytical Foundation → Week 5 — Analysis & Initial Implementation → Week 6 — Refinement & Integration
 
-- understand the HealthConnect appointment dataset;
-- review the Data Dictionary;
-- assess initial data quality;
-- identify variables relevant to appointment attendance and no-shows;
-- define relevant Business Questions;
-- identify potential KPIs linked to decision needs;
-- formulate an initial analytical approach;
-- document assumptions, limitations, risks, and dependencies.
+3. Project Continuity
 
-No final explanation of no-show drivers is claimed at this stage.
+The HealthConnect Experience Lab is a progressive multi-week project.
 
-> **Week 4 principle:**  
-> **UNDERSTAND → REVIEW → DEFINE → PLAN**
+flowchart LR
+    A["Week 4<br/>UNDERSTAND"] --> B["REVIEW"]
+    B --> C["DEFINE"]
+    C --> D["PLAN"]
+    D --> E["Week 5<br/>PREPARE"]
+    E --> F["ANALYSE"]
+    F --> G["VALIDATE"]
+    G --> H["MONITOR"]
+    H --> I["DIAGNOSE"]
+    I --> J["PRIORITIZE"]
+    J --> K["Week 6<br/>REFINE & INTEGRATE"]
 
----
+Week 5 decision-support flow
 
-## 4. Data Resources
+MONITOR → DIAGNOSE → PRIORITIZE
 
-Two project resources are used for the Data Analytics Track:
+MONITOR — establish the overall attendance situation and KPI baseline.
 
-| Resource | Purpose |
-|---|---|
-| `HealthConnect_Appointment_Data.csv` | Fictional and anonymized appointment-level dataset |
-| `HealthConnect_Data_Dictionary.xlsx` | Reference definitions for the variables contained in the dataset |
+DIAGNOSE — determine which factors meaningfully differentiate No-Show Rates.
 
-The original project resources are preserved unchanged.
+PRIORITIZE — translate analytical evidence into attention priorities while preserving interpretation guardrails.
 
----
+WEEK 4 — ANALYTICAL FOUNDATION
 
-## 5. Dataset Overview
+3. Week 4 Objective
 
-The Data Dictionary was reviewed before analytical planning and used as the primary reference for understanding the dataset structure.
+Week 4 focused on understanding, reviewing, defining, and planning rather than executing the full analysis.
 
-| Item | Result | Interpretation |
-|---|---:|---|
-| Number of rows | 5,000 | Each row represents one appointment |
-| Number of columns | 18 | Consistent with the Data Dictionary |
-| Analytical grain | Appointment record | Selected unit of analysis |
-| `appointment_id` | 5,000 unique values | No duplicate appointment identifiers |
-| `patient_id` | 1,696 unique values | May appear across multiple appointments |
-| Appointment period | 01 Jan 2025 – 30 Jun 2026 | Scheduled appointment window |
-| Primary outcome | Attended / No-Show / Cancelled | `appointment_outcome` |
+The Data Analytics foundation established:
 
-The selected analytical grain is therefore the **appointment rather than the patient**.
+dataset and Data Dictionary understanding;
 
-This distinction is important because some attributes associated with repeated `patient_id` values are not longitudinally stable in the dataset.
+initial data-quality assessment;
 
----
+appointment-level unit of analysis;
 
-## 6. Initial Data Quality Assessment
+six Business Questions;
 
-Technical inspection was performed before defining the future analytical execution.
+twelve analytical hypotheses;
 
-| Check | Result | Assessment | Analytical Handling |
-|---|---|---|---|
-| Structure | 5,000 × 18; all expected variables present | PASS | Retain schema |
-| `appointment_id` | 5,000 unique; 0 duplicates | PASS | Appointment-level grain confirmed |
-| Dates / Lead Time | 0 invalid booking chronology; 0 lead-time mismatches; 0 appointment-day mismatches | PASS | Convert date fields before analysis |
-| Reminder Channel | 1,366 missing values, all associated with `reminder_sent = No` | STRUCTURAL N/A | Treat as Not Applicable |
-| `distance_to_clinic_km` | 90 missing values (1.8%) | ATTENTION | Assess handling before BQ4; no automatic imputation |
-| `waiting_time_minutes` | 60 missing values (1.2%) | ATTENTION | Assess handling before BQ4; no automatic imputation |
-| Internal History | 0 rows where `previous_no_shows > previous_appointments` | PASS | Logical row-level relationship respected |
-| Repeated `patient_id` | Inconsistencies observed in demographic and historical attributes | LIMITATION | Avoid unreliable longitudinal reconstruction |
+three potential KPIs;
 
-### Key Data Quality Implication
+an initial analysis approach;
 
-The dataset is sufficiently usable for the planned **appointment-level analysis**, but patient-level longitudinal interpretation requires caution.
+assumptions, limitations, risks, and dependencies.
 
----
+Week 4 principle:
+UNDERSTAND → REVIEW → DEFINE → PLAN
 
-## 7. Analytical Architecture
+No final explanation of no-show drivers was claimed at this stage.
 
-Variables were not selected simply because they were available.
+4. Week 4 Business Questions
 
-They were organized according to their expected contribution to the Business Questions.
+BQ
 
-| Analytical Architecture | Variables | Analytical Role | BQ |
-|---|---|---|---|
-| Outcome / Baseline | `appointment_outcome` | Core outcome variable | BQ1 |
-| Appointment Context | `appointment_type` | Compare patterns by appointment type | BQ2 |
-| Scheduling Context | `appointment_day`, `appointment_time`, `booking_lead_days` | Examine scheduling-related differences | BQ2 |
-| Reminder & Engagement | `reminder_sent`, `reminder_channel` | Examine patterns associated with reminders | BQ3 |
-| Accessibility & Operations | `distance_to_clinic_km`, `waiting_time_minutes` | Examine accessibility and operational context | BQ4 |
-| Recorded History | `previous_appointments`, `previous_no_shows` | Explore recorded history cautiously | BQ5 |
-| Recorded Characteristics | `age`, `age_group`, `gender` | Appointment-level descriptive segmentation | BQ6 |
-| Structural Support | `appointment_id`, `patient_id`, `booking_date`, `appointment_date` | Validation, grain, derivations, and traceability | Support |
+Business Question
 
----
+BQ1 — Overall Appointment Outcome
 
-## 8. Business Questions
+What is the overall distribution of appointment outcomes, and what is the relative extent of no-shows?
 
-The Week 4 analytical foundation is structured around six Business Questions.
+BQ2 — Appointment & Scheduling Context
 
-| BQ | Business Question |
-|---|---|
-| **BQ1 — Overall Appointment Outcome** | What is the overall distribution of appointment outcomes, and what is the relative extent of no-shows? |
-| **BQ2 — Appointment & Scheduling Context** | How do no-show patterns vary across appointment types and scheduling characteristics, including appointment day, appointment time, and booking lead time? |
-| **BQ3 — Reminder & Engagement** | How do no-show patterns vary by reminder status and, where applicable, by the reminder channel used? |
-| **BQ4 — Accessibility & Operational Context** | How do no-show patterns vary across recorded distance-to-clinic and estimated waiting-time levels? |
-| **BQ5 — Recorded Patient History** | How do no-show patterns vary according to the recorded number of previous appointments and previous no-shows? |
-| **BQ6 — Recorded Patient Characteristics** | How do no-show patterns vary across recorded age groups and gender categories? |
+How do no-show patterns vary across appointment types and scheduling characteristics, including day, time, and booking lead time?
 
-These questions define the analytical direction for subsequent project stages.
+BQ3 — Reminder & Engagement
 
----
+How do no-show patterns vary by reminder status and, where applicable, reminder channel?
 
-## 9. Analytical Hypotheses — Value-Added Layer
+BQ4 — Accessibility & Operational Context
 
-To move beyond unstructured exploratory analysis, the Business Questions were translated into explicit analytical hypotheses.
+How do no-show patterns vary across recorded distance-to-clinic and estimated waiting-time levels?
 
-These hypotheses represent **relationships to be tested**, not established findings.
+BQ5 — Recorded Patient History
 
-| Hypothesis | Focus | Relationship to Test |
-|---|---|---|
-| H2a | Appointment Type | The no-show rate differs across appointment types. |
-| H2b | Appointment Day | The no-show rate differs across appointment days. |
-| H2c | Appointment Time | The no-show rate differs across appointment time periods. |
-| H2d | Booking Lead Time | No-show patterns differ according to the time between booking and appointment. |
-| H3a | Reminder Sent | The no-show rate differs between appointments with and without a recorded reminder. |
-| H3b | Reminder Channel | Among appointments with a reminder, the no-show rate differs across reminder channels. |
-| H4a | Distance to Clinic | No-show patterns differ according to the recorded distance to the clinic. |
-| H4b | Waiting Time | No-show patterns differ according to estimated waiting time. |
-| H5a | Previous Appointments | No-show patterns differ according to the recorded number of previous appointments. |
-| H5b | Previous No-Shows | No-show patterns differ according to the recorded number of previous no-shows. |
-| H6a | Age Group | The no-show rate differs across recorded age groups. |
-| H6b | Gender | The no-show rate differs across recorded gender categories. |
+How do no-show patterns vary according to previous appointments and previous no-shows?
 
-**BQ1 is descriptive and therefore does not require a formal analytical hypothesis.**
+BQ6 — Recorded Patient Characteristics
 
----
+How do no-show patterns vary across recorded age groups and gender categories?
 
-## 10. Business Question → Hypothesis → Analysis Map
+WEEK 5 — ANALYSIS, VALIDATION & INITIAL IMPLEMENTATION
 
-The planned analysis follows a question-driven rather than chart-driven approach.
+5. Week 5 Objective
 
-| Business Question | Focus | Hypotheses | Planned Analysis |
-|---|---|---|---|
-| BQ1 | Baseline | Descriptive | Outcome distribution and No-Show Rate after denominator definition |
-| BQ2 | Appointment & Scheduling | H2a–H2d | Comparisons by appointment type, day, time period, and booking lead time |
-| BQ3 | Reminder & Engagement | H3a–H3b | Reminder Yes vs No, followed by conditional comparison across reminder channels |
-| BQ4 | Accessibility & Operations | H4a–H4b | Patterns across recorded distance and waiting time |
-| BQ5 | Recorded History | H5a–H5b | Comparisons across recorded historical variables |
-| BQ6 | Recorded Characteristics | H6a–H6b | Comparisons across age groups and gender categories |
+Week 5 moved the project from analytical planning into practical analysis and initial implementation.
 
----
+The work completed included:
 
-## 11. Potential KPI Framework
+data preparation and quality validation;
 
-Potential KPIs were selected using the following logic:
+EDA structured by Business Question;
 
-> **Business Question → Decision Need → Potential KPI**
+hypothesis evaluation;
 
-rather than:
+KPI development and interpretation;
 
-> Variable Available → Metric Calculable → KPI
+initial Power BI dashboard development;
 
-Only three indicators were retained at this stage.
+evidence hierarchy and analytical prioritisation;
 
-| Potential KPI | Linked BQ | Potential Decision Use | Week 4 Status |
-|---|---|---|---|
-| **No-Show Rate (%)** | BQ1 | Measure and subsequently monitor the relative magnitude of missed appointments | Potential KPI — denominator to be finalized |
-| **Reminder Coverage Rate (%)** | BQ3 | Measure operational coverage of the reminder process | Potential KPI |
-| **No-Show Rate by Reminder Status** | BQ3 | Compare no-show patterns between appointments with and without a recorded reminder | Potential diagnostic / decision-support KPI — association only |
+business insights and recommendations;
 
-Additional segmentation measures required for **BQ2–BQ6** will support the analysis but are **not automatically classified as KPIs**.
+limitations and risk review;
 
-### Important Methodological Note
+preparation for the next project phase.
 
-The **No-Show Rate will not be calculated until the eligible population, numerator, denominator, and treatment of Cancelled appointments are explicitly defined.**
+The analytical objective was not to scan every variable until something interesting appeared, but to start from the Business Questions defined in Week 4, test the corresponding hypotheses, and rank the resulting signals according to the strength and decision relevance of the observed evidence.
 
----
+6. Data Preparation & Quality Validation
 
-## 12. Initial Analysis Approach
+The original HealthConnect project resources were preserved unchanged.
 
-The future analysis will investigate no-show patterns progressively.
+Check
 
-### Analytical Sequence
+Result
 
-**Overall Outcome → Appointment & Scheduling → Reminder & Engagement → Accessibility & Operations → Recorded History → Recorded Characteristics**
+Analytical Treatment
 
-### Proposed Methods
+Dataset structure
 
-| Analytical Need | Proposed Method |
-|---|---|
-| Overall appointment profile | Frequencies and proportions |
-| Categorical segment comparison | Counts, rates, cross-tabulations, and group-level comparisons |
-| Continuous / ordinal variables | Distribution analysis followed by grouping only where justified |
-| Reminder status | Comparison of No-Show Rates |
-| Reminder channel | Conditional comparison where `reminder_sent = Yes` |
-| Magnitude of differences | Absolute and relative differences where appropriate |
-| Statistical evidence | Appropriate tests only where justified by the question, variable type, and assumptions |
+5,000 rows × 18 columns
 
-No arbitrary segmentation of continuous variables will be applied before reviewing their distributions and analytical relevance.
+Expected structure retained
 
----
+appointment_id
 
-## 13. Interpretation Principles
+5,000 unique
 
-Future analytical interpretation will follow:
+Appointment-level unit of analysis confirmed
 
-> **Finding → Interpretation → Business Implication → Recommendation**
+Exact duplicate rows
 
-Recommendations must be traceable to identifiable analytical evidence.
+0
 
-Because the dataset is observational:
+No duplicate removal required
 
-> **Association ≠ Causation**
+Missing distance_to_clinic_km
 
-An observed relationship may justify further investigation, validation, or a pilot, but it will not automatically be interpreted as a causal effect.
+90 (1.8%)
 
----
+No automatic imputation
 
-## 14. Assumptions, Limitations, Risks & Dependencies
+Missing waiting_time_minutes
 
-| Type | Key Consideration | Analytical Response |
-|---|---|---|
-| Assumption | Each row represents one appointment and `appointment_outcome` its recorded final status | Maintain appointment-level grain |
-| Assumption | Historical variables may be used as recorded row-level information | Do not reconstruct longitudinal patient histories |
-| Limitation | Demographic and historical inconsistencies exist across some repeated `patient_id` values | Limit patient-level conclusions |
-| Limitation | Distance and waiting time contain limited missingness | Document handling before BQ4 |
-| Limitation | Dataset is observational and limited to available variables | Do not infer causality or rule out unobserved determinants |
-| Risk | Incorrect No-Show Rate denominator could alter interpretation | Define population, numerator, denominator, and formula first |
-| Risk | Arbitrary grouping of continuous variables could create misleading patterns | Review distributions and justify analytical bands |
-| Risk | Segmentation metrics could be incorrectly promoted to KPIs | Require a clear decision or monitoring need |
-| Dependency | Final KPI and recommendation selection depends on future findings | Do not pre-select priority segments |
-| Dependency | Cross-deliverable consistency requires stable metric definitions | Build a Metric Reference Table / Single Source of Truth before final reporting |
+60 (1.2%)
 
----
+No automatic imputation
 
-## 15. Hybrid Documentation Approach
+reminder_channel = None
 
-Week 4 uses a hybrid documentation architecture:
+1,366 records
 
-**Raw Dataset → Technical Notebook → Validated Evidence → Initial Analysis Document → Future Analysis**
+Structural N/A when no reminder was sent
 
-### Main Analytical Output
+Repeated patient-level inconsistencies
 
-**Initial Analysis Document**
+Present
 
-Provides the structured analytical communication layer:
+No longitudinal patient reconstruction
 
-- dataset understanding;
-- data quality assessment;
-- Business Questions;
-- analytical hypotheses;
-- potential KPIs;
-- initial analysis approach;
-- assumptions, limitations, risks, and dependencies.
+Data-quality guardrail
 
-### Supporting Technical Evidence
+The appointment record remains the unit of analysis.
 
-**Technical Data Inspection Notebook**
+Repeated patient_id values were not treated as reliable longitudinal patient histories because several recorded demographic and historical attributes were not stable across repeated identifiers.
 
-Provides reproducible evidence through:
+7. KPI Framework
 
-> **Purpose → Code → Result → Interpretation**
+Three Week 4 potential KPIs were operationalised in Week 5.
 
-The notebook validates dataset structure, data types, missing values, identifiers, consistency rules, and analytical readiness without prematurely answering the Business Questions.
+KPI
 
----
+Definition
 
-## 16. Week 4 Deliverables
+Week 5 Result
 
-| Deliverable | Role |
-|---|---|
-| **[Initial Analysis Document](reports/WK4_HealthConnect_Initial_Analysis_Document_Nancy_Lee_YIMBERE_ALAPINI.pdf)** | Main Data Analytics Week 4 analytical output |
-| **[Technical Data Inspection Notebook (.ipynb)](notebooks/WK4_HealthConnect_Technical_Data_Inspection_Notebook_Nancy_Lee_YIMBERE_ALAPINI.ipynb)** | Reproducible supporting technical evidence |
-| **[Technical Data Inspection Notebook (.pdf)](notebooks/WK4_HealthConnect_Technical_Data_Inspection_Notebook_Nancy_Lee_YIMBERE_ALAPINI.pdf)** | Readable notebook export |
-| **[Week 4 Project Summary](reports/WK4_HealthConnect_Project_Summary_Nancy_Lee_YIMBERE_ALAPINI.pdf)** | Concise project foundation summary |
+Linked BQ
 
+No-Show Rate (%)
 
----
+No-Shows / (Attended + No-Show)
 
+51.15%
+
+BQ1
+
+Reminder Coverage Rate (%)
+
+Appointments with reminder / All appointments
+
+72.68%
+
+BQ3
+
+No-Show Rate by Reminder Status
+
+No-Show Rate compared across reminder status
+
+54.63% No Reminder / 49.86% Reminder Sent
+
+BQ3
+
+Supporting metric: No-Reminder Gap = +4.78 percentage points
+
+Reminder exposure is interpreted as an observed association, not as evidence that reminders causally reduce no-shows.
+
+8. Key Analytical Findings
+
+8.1 Overall Appointment Outcome
+
+Total appointments: 5,000
+
+No-Show: 2,423
+
+Attended: 2,314
+
+Cancelled: 263
+
+Non-cancelled analytical population: 4,737
+
+Overall No-Show Rate: 51.15%
+
+8.2 Booking Lead Time — Clearest Observed Differentiation
+
+Booking Lead Time
+
+No-Show Rate
+
+0–7 days
+
+29.47%
+
+8–14 days
+
+35.19%
+
+15–30 days
+
+45.53%
+
+31–45 days
+
+57.03%
+
+46–60 days
+
+71.36%
+
+Spearman ρ = 0.2873, p < 0.001
+
+Booking lead time shows the clearest observed differentiation in No-Show Rates among the factors examined.
+
+8.3 Recorded Previous No-Shows — Supporting History Signal
+
+Recorded Previous No-Shows
+
+No-Show Rate
+
+0
+
+46.30%
+
+1
+
+55.87%
+
+2
+
+62.05%
+
+3
+
+69.74%
+
+Observed 0-to-3 gap: +23.43 pp
+Spearman ρ = 0.1214, p < 0.001
+
+Recorded previous no-shows provide a useful supporting prioritisation signal, but should not be treated as a standalone predictor.
+
+8.4 Reminder Exposure — Weak Observed Differentiation
+
+Reminder Coverage Rate: 72.68%
+
+No Reminder No-Show Rate: 54.63%
+
+Reminder Sent No-Show Rate: 49.86%
+
+No-Reminder Gap: +4.78 pp
+
+Cramér's V: approximately 0.042
+
+The difference is statistically detectable but the association is very weak.
+
+Coverage ≠ effectiveness. Association ≠ causation.
+
+9. Evidence Hierarchy
+
+Evidence Level
+
+Factors
+
+Primary Signals
+
+Booking Lead Time; Recorded Previous No-Shows
+
+Secondary Signals
+
+Reminder Exposure; Distance to Clinic
+
+Contextual Signals
+
+Appointment Type; Previous Appointments; Reminder Channel
+
+No Standalone Prioritisation
+
+Appointment Day; Appointment Time; Waiting Time; Age Group; Gender
+
+This hierarchy deliberately considers descriptive evidence, statistical significance, effect size, stability, data quality, and decision relevance rather than relying on p-values alone.
+
+📊 POWER BI DECISION-SUPPORT DASHBOARD
+
+MONITOR → DIAGNOSE → PRIORITIZE
+
+The Week 5 dashboard was designed as a decision-support journey, not as a collection of unrelated charts.
+
+01 | MONITOR
+
+Decision question: What is the current appointment-attendance situation?
+
+<p align="center"><img src="assets/week5/01_monitor.png" alt="HealthConnect Week 5 — MONITOR" width="950"></p>
+
+Key signal: No-show exposure is high overall, while reminder status provides only limited differentiation. Further diagnosis should therefore focus on factors showing stronger variation in No-Show Rates.
+
+02 | DIAGNOSE
+
+Decision question: Which factors meaningfully differentiate No-Show Rates?
+
+<p align="center"><img src="assets/week5/02_diagnose.png" alt="HealthConnect Week 5 — DIAGNOSE" width="950"></p>
+
+Diagnostic signal: Booking lead time shows the clearest differentiation in No-Show Rates, while recorded previous no-shows provide a useful supporting signal. Other examined factors show weaker or limited standalone differentiation.
+
+03 | PRIORITIZE
+
+Decision question: Where should HealthConnect focus analytical and operational attention first?
+
+<p align="center"><img src="assets/week5/03_prioritize.png" alt="HealthConnect Week 5 — PRIORITIZE" width="950"></p>
+
+Priority logic:
+
+Primary Priority — Long Booking Lead Times
+
+Supporting Priority — Recorded Previous No-Shows
+
+Investigate — Reminder Strategy
+
+Do Not Prioritise in Isolation — factors without meaningful standalone differentiation
+
+11. From Evidence to Decision Support
+
+The Week 5 interpretation follows the chain:
+
+Business Question → Hypothesis → Analysis → Finding → Evidence → Interpretation → Business Implication → Recommendation
+
+Priority 1 — Long Booking Lead Time
+
+Focus analytical and operational attention first on appointments booked 31–60 days in advance, with particular attention to the 46–60 day group.
+
+Decision direction: assess targeted pre-appointment engagement closer to the appointment date.
+
+Monitor: No-Show Rate by Booking Lead Band.
+
+Priority 2 — Recorded Previous No-Shows
+
+Use recorded previous no-shows as a supporting prioritisation signal, particularly where multiple previous no-shows are recorded.
+
+Decision direction: consider additional follow-up when this history signal occurs alongside higher-risk scheduling contexts.
+
+Monitor: No-Show Rate by Recorded Previous No-Shows.
+
+Investigate — Reminder Strategy
+
+Reminder exposure shows limited differentiation. Before changing reminder interventions, investigate:
+
+reminder timing;
+
+targeting;
+
+channel strategy;
+
+interactions with stronger attendance-risk signals.
+
+Do Not Prioritise in Isolation
+
+Current evidence does not justify standalone prioritisation based solely on:
+
+appointment day;
+
+appointment time;
+
+waiting time;
+
+age group;
+
+gender.
+
+12. Interpretation Guardrails
+
+Correlation ≠ Causality
+
+Benchmark ≠ Target
+
+Statistical significance alone does not establish decision relevance.
+
+Weak associations are not promoted to primary drivers.
+
+Sparse categories are not used to define intervention thresholds.
+
+Patient-level histories are not reconstructed from inconsistent repeated patient_id records.
+
+Recommendations remain proportionate to the evidence available in Week 5.
+
+13. Cross-Track Collaboration Status
+
+Cross-track collaboration was not completed within the Week 5 submission window.
+
+Given the deadline, priority was given to completing, validating, and documenting the Data Analytics track deliverables rather than claiming an exchange that had not occurred.
+
+This dependency remains open for Week 6, when validated analytical findings can be shared with relevant tracks for integration, refinement, or downstream modelling.
+
+14. Week 5 Deliverables
+
+The Week 5 files are organised in the repository folders notebooks, dashboards, and reports.
+
+Deliverable
+
+Role
+
+WK5_HealthConnect_Analytics_Nancy_Lee_YIMBERE_ALAPINI.ipynb
+
+Reproducible data preparation, EDA, hypothesis evaluation and KPI calculations
+
+WK5_HealthConnect_Analytics_Dashboard_Nancy_Lee_YIMBERE_ALAPINI.pbix
+
+Initial analytical dashboard: MONITOR → DIAGNOSE → PRIORITIZE
+
+WK5_HealthConnect_Business_Insights_Recommendations_Nancy_Lee_YIMBERE_ALAPINI.pdf
+
+Findings, business implications and recommendations
+
+WK5_HealthConnect_Project_Summary_Nancy_Lee_YIMBERE_ALAPINI.pdf
+
+Concise Week 5 implementation summary
+
+15. Week 4 Deliverables
+
+The Week 4 analytical foundation remains available in the same repository.
+
+Deliverable
+
+Role
+
+WK4_HealthConnect_Initial_Analysis_Document_Nancy_Lee_YIMBERE_ALAPINI.pdf
+
+Main Week 4 analytical foundation
+
+WK4_HealthConnect_Technical_Data_Inspection_Notebook_Nancy_Lee_YIMBERE_ALAPINI.ipynb
+
+Reproducible supporting technical evidence
+
+WK4_HealthConnect_Technical_Data_Inspection_Notebook_Nancy_Lee_YIMBERE_ALAPINI.pdf
+
+Readable notebook export
+
+WK4_HealthConnect_Project_Summary_Nancy_Lee_YIMBERE_ALAPINI.pdf
+
+Concise project foundation summary
+
+16. Week 6 Focus
+
+16. Week 6 Focus
+
+The next phase should focus on:
+
+testing whether combinations of Booking Lead Time + Recorded Previous No-Shows improve prioritisation;
+
+refining intervention hypotheses without converting associations into causal claims;
+
+investigating reminder timing, targeting, and channel strategy;
+
+initiating meaningful cross-track collaboration where relevant;
+
+refining and testing the initial analytical outputs;
+
+maintaining KPI traceability and cross-deliverable consistency.
+
+17. Analytical Method
+
+The project follows a question-driven rather than chart-driven analytical logic:
+
+Business Problem → Business Questions → Hypotheses → Data → Analysis → Findings → Insights → Business Implications → Recommendations → Decision Support
+
+The Week 5 dashboard operationalises this logic through:
+
+MONITOR → DIAGNOSE → PRIORITIZE
+
+The objective is not to maximise the number of analytical outputs, but to establish which results are sufficiently supported to deserve a place in decision-making.
+
+Author
+
+Nancy Lee YIMBERE ALAPINI
+Performance & Decision Intelligence Analyst
+AnalystLab Africa Internship Programme — HealthConnect Experience Lab
+
+Project Status
+
+Week 4 — Analytical Foundation ✅
+Week 5 — Analysis, KPI Development & Initial Implementation ✅
+Week 6 — Refinement & Integration ⏳
