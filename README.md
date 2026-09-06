@@ -21,7 +21,7 @@ Core business question: How can HealthConnect Clinic use data and AI to reduce m
 
 For the Data Analytics Track, the objective is to understand attendance patterns, evaluate analytical hypotheses, develop decision-relevant KPIs, and translate validated evidence into actionable priorities.
 
-2. Week 5 Deliverables
+## **2. Week 5 Deliverables**
 
 The Week 5 deliverables are stored in the repository's notebooks, dashboards, and reports folders.
 
@@ -67,7 +67,7 @@ Week 4 Project Summary (.pdf)
 
 Concise analytical foundation summary
 
-3. Project Continuity
+## **3. Project Continuity**
 
 The HealthConnect Experience Lab is a progressive multi-week project.
 
@@ -79,7 +79,7 @@ Week 4 established the analytical foundation. Week 5 moved the project into prac
 
 WEEK 4 — ANALYTICAL FOUNDATION
 
-4. Week 4 Objective
+## **4. Week 4 Objective**
 
 Week 4 focused on understanding and structuring the problem before executing the analysis.
 
@@ -105,7 +105,7 @@ Week 4 principle: UNDERSTAND → REVIEW → DEFINE → PLAN
 
 WEEK 5 — ANALYSIS & INITIAL IMPLEMENTATION
 
-5. Week 5 Objective
+## **5. Week 5 Objective**
 
 Week 5 moved from analytical planning to practical implementation:
 
@@ -127,7 +127,7 @@ documentation of limitations and interpretation guardrails.
 
 The analysis remained question-driven rather than chart-driven.
 
-6. Data Preparation & Quality Validation
+## **6. Data Preparation & Quality Validation**
 
 Check
 
@@ -179,7 +179,7 @@ No longitudinal patient reconstruction
 
 Data-quality guardrail: the appointment record remains the unit of analysis.
 
-7. KPI Framework
+## **7. KPI Framework**
 
 KPI
 
@@ -217,9 +217,9 @@ Supporting metric: No-Reminder Gap = +4.78 percentage points
 
 Reminder exposure is interpreted as an observed association, not as evidence of causal effectiveness.
 
-8. Key Analytical Findings
+## **8. Key Analytical Findings**
 
-8.1 Overall Appointment Outcome
+**8.1 Overall Appointment Outcome**
 
 Outcome Metric
 
@@ -249,7 +249,7 @@ Overall No-Show Rate
 
 51.15%
 
-8.2 Booking Lead Time — Clearest Observed Differentiation
+**8.2 Booking Lead Time — Clearest Observed Differentiation**
 
 Booking Lead Time
 
@@ -279,7 +279,7 @@ Spearman ρ = 0.2873, p < 0.001
 
 Interpretation: Booking lead time shows the clearest observed differentiation in No-Show Rates among the factors examined.
 
-8.3 Recorded Previous No-Shows — Supporting History Signal
+**8.3 Recorded Previous No-Shows — Supporting History Signal**
 
 Recorded Previous No-Shows
 
@@ -306,7 +306,7 @@ Spearman ρ = 0.1214, p < 0.001
 
 Interpretation: Recorded previous no-shows provide a useful supporting prioritisation signal, but should not be treated as a standalone predictor.
 
-8.4 Reminder Exposure — Weak Observed Differentiation
+**8.4 Reminder Exposure — Weak Observed Differentiation**
 
 Reminder Metric
 
@@ -336,7 +336,7 @@ The difference is statistically detectable, but the association is very weak.
 
 Coverage ≠ Effectiveness. Association ≠ Causation.
 
-9. Evidence Hierarchy
+## **9. Evidence Hierarchy**
 
 Evidence Level
 
@@ -362,11 +362,11 @@ The hierarchy considers descriptive evidence, statistical significance, effect s
 
 POWER BI DECISION-SUPPORT DASHBOARD
 
-10. MONITOR → DIAGNOSE → PRIORITIZE
+## **10. MONITOR → DIAGNOSE → PRIORITIZE**
 
 The dashboard is designed as a decision-support journey rather than a collection of unrelated charts.
 
-01 | MONITOR
+**01 | MONITOR**
 
 Decision question: What is the current appointment-attendance situation?
 
@@ -374,7 +374,7 @@ Decision question: What is the current appointment-attendance situation?
 
 Decision signal: No-show exposure is high overall, while reminder status provides only limited differentiation. Further diagnosis should focus on factors showing stronger variation in No-Show Rates.
 
-02 | DIAGNOSE
+**02 | DIAGNOSE**
 
 Decision question: Which factors meaningfully differentiate No-Show Rates?
 
@@ -382,7 +382,7 @@ Decision question: Which factors meaningfully differentiate No-Show Rates?
 
 Diagnostic signal: Booking lead time shows the clearest differentiation, while recorded previous no-shows provide a useful supporting signal.
 
-03 | PRIORITIZE
+**03 | PRIORITIZE**
 
 Decision question: Where should HealthConnect focus analytical and operational attention first?
 
@@ -418,25 +418,25 @@ Appointment Day, Appointment Time, Waiting Time, Age Group and Gender
 
 Continue monitoring only if analytically relevant
 
-11. Business Insights & Recommendations
+## **11. Business Insights & Recommendations**
 
-Recommendation 1 — Prioritise Long Booking Lead Times
+**Recommendation 1 — Prioritise Long Booking Lead Times**
 
 Focus first on appointments booked 31–60 days in advance, with particular attention to the 46–60 day group.
 
-Recommendation 2 — Use Previous No-Shows as a Supporting Signal
+**Recommendation 2 — Use Previous No-Shows as a Supporting Signal**
 
 Consider additional follow-up where multiple recorded previous no-shows occur alongside higher-risk scheduling contexts.
 
-Recommendation 3 — Investigate Reminder Strategy Before Modifying It
+**Recommendation 3 — Investigate Reminder Strategy Before Modifying It**
 
 Assess reminder timing, targeting and channel strategy before changing reminder interventions.
 
-Recommendation 4 — Avoid Targeting Weakly Differentiating Factors
+**Recommendation 4 — Avoid Targeting Weakly Differentiating Factors**
 
 Current evidence does not support standalone prioritisation based solely on appointment day, appointment time, waiting time, age group or gender.
 
-12. Interpretation Guardrails
+## **12. Interpretation Guardrails**
 
 Correlation ≠ Causality
 
@@ -452,7 +452,7 @@ Patient-level histories are not reconstructed from inconsistent repeated patient
 
 Recommendations remain proportionate to the evidence available in Week 5.
 
-13. Cross-Track Collaboration Status
+## **13. Cross-Track Collaboration Status**
 
 Cross-track collaboration was not completed within the Week 5 submission window.
 
@@ -460,7 +460,7 @@ Priority was given to completing, validating and documenting the Data Analytics 
 
 This dependency remains open for Week 6.
 
-14. Week 6 Focus
+## **14. Week 6 Focus**
 
 The next phase should focus on:
 
@@ -476,7 +476,7 @@ refining and testing the initial analytical outputs;
 
 maintaining KPI traceability and cross-deliverable consistency.
 
-15. Analytical Method
+## **15. Analytical Method**
 
 Business Problem → Business Questions → Hypotheses → Data → Analysis → Findings → Insights → Business Implications → Recommendations → Decision Support
 
@@ -486,7 +486,7 @@ MONITOR → DIAGNOSE → PRIORITIZE
 
 The objective is not to maximise the number of analytical outputs, but to establish which results are sufficiently supported to deserve a place in decision-making.
 
-Project Status
+**Project Status**
 
 Week 4 — Analytical Foundation: Completed
 
