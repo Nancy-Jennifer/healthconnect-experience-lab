@@ -1,16 +1,17 @@
-HealthConnect Experience Lab
+# **HealthConnect Experience Lab**
 
-Improving Patient Appointment Attendance and Healthcare Support Using Data and AI
+## *Improving Patient Appointment Attendance and Healthcare Support Using Data and AI*
 
-Data Analytics Track | AnalystLab Africa Internship Programme
+### **Data Analytics Track | AnalystLab Africa Internship Programme**
 
-Author: Nancy Lee YIMBERE ALAPINI
-Professional Focus: Performance & Decision Intelligence Analyst
-Project Status: Week 5 — Analytics Development & Initial Implementation Completed
+**Author:** Nancy Lee YIMBERE ALAPINI  
+**Professional Focus:** *Performance & Decision Intelligence Analyst*  
+**Project Status:** **Week 5 — Analytics Development & Initial Implementation Completed**
 
-A progressive analytics project translating appointment data into evidence-based decision support for patient attendance.
+> *A progressive analytics project translating appointment data into evidence-based decision support for patient attendance.*
 
-1. Project Overview
+---
+## **1. Project Overview**
 
 The HealthConnect Experience Lab is a multidisciplinary project developed as part of the AnalystLab Africa Internship Programme.
 
