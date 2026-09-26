@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/week8/WK8_HealthConnect_00_Healthcare_Appointment_Icon.png" width="105" alt="HealthConnect Healthcare Appointment Icon">
+</p>
+
 # HealthConnect Experience Lab
 
 ## Improving Patient Appointment Attendance and Healthcare Support Using Data and AI
@@ -6,73 +10,96 @@
 **Analyst:** Nancy Lee YIMBERE ALAPINI  
 **Professional Focus:** Performance & Decision Intelligence  
 **Programme:** AnalystLab Africa Internship Programme  
-**Project Status:** Week 7 — Testing, Refinement & End-to-End Validation Completed
+**Project Coverage:** Weeks 4–8  
+**Final Status:** Week 8 — Final Analytics & Decision Support Package Completed
 
-> Current analytical focus: testing, refining and validating the HealthConnect decision-support solution before Week 8 final integration.
+> **Final analytical focus:** transform validated appointment-attendance evidence into a defensible decision-support framework that tells HealthConnect where to evaluate attendance support first, how to refine that evaluation population, and how to measure whether an action works.
 
 ---
 
-## Project Overview
+# Project Overview
 
 HealthConnect Experience Lab is a multi-week analytics project focused on understanding patient appointment attendance patterns and supporting better operational decision-making around patient attendance.
 
-The project progressively moves from business understanding and data-quality assessment to exploratory analysis, KPI development, advanced validation, cross-track integration, dashboard refinement and end-to-end testing.
+Across Weeks 4–8, the Data Analytics workstream progressively moved through:
+
+**Business Understanding → Data Quality → Analysis → KPI Design → Validation → Dashboard Development → Advanced Testing → Cross-Track Collaboration → Refinement → Decision Support → Final Integration**
 
 The central business question is:
 
-> How can HealthConnect use appointment data to better understand attendance patterns, identify meaningful no-show signals, prioritise attendance-support actions, and improve decision-making without overstating what the available data can prove?
+> **How can HealthConnect use appointment data to better understand attendance patterns, identify meaningful no-show signals, prioritise attendance-support actions, and improve decision-making without overstating what the available data can prove?**
+
+By Week 8, this was translated into a more operational decision question:
+
+> **Where should HealthConnect start if it wants to test attendance support — and how should success be measured?**
 
 The analytical unit remains the **appointment record**.
 
 The project does not reconstruct reliable longitudinal patient histories because patient-level consistency checks identified limitations in recorded demographic and historical variables.
 
+The final solution therefore supports **group-level prioritisation and controlled evaluation**, not deterministic individual patient prediction.
+
 ---
 
-# Quick Navigation — Week 7 Deliverables
+# Quick Navigation — Final Project
 
-### Main Analytics Testing & Refinement Report
-[View Week 7 Analytics Testing & Refinement Report](reports/WK7_HealthConnect_Analytics_Testing_Refinement_Report_Nancy_Lee_YIMBERE_ALAPINI.pdf)
+### Week 8 Final Analytics & Decision Support Report
 
-### Week 7 Project Summary
-[View Week 7 Project Summary](reports/WK7_HealthConnect_Project_Summary_Nancy_Lee_YIMBERE_ALAPINI.pdf)
+[View Week 8 Final Analytics & Decision Support Report](reports/WK8_HealthConnect_Final_Analytics_Decision_Support_Report_Nancy_Lee_YIMBERE_ALAPINI.pdf)
 
-### Testing & Validation Evidence Pack
+### Week 8 Executive Summary
+
+[View Week 8 Executive Summary](reports/WK8_HealthConnect_Executive_Summary_Nancy_Lee_YIMBERE_ALAPINI.pdf)
+
+### Week 8 Integration Readiness Evidence
+
+[View Week 8 Integration Readiness Evidence](reports/WK8_HealthConnect_Integration_Readiness_Evidence_Nancy_Lee_YIMBERE_ALAPINI.pdf)
+
+### Final Power BI Dashboard
+
+[Download Week 8 Power BI Dashboard](dashboards/WK8_HealthConnect_Analytics_Dashboard_Nancy_Lee_YIMBERE_ALAPINI.pbix)
+
+### Stakeholder Presentation — PDF
+
+[View Week 8 Stakeholder Presentation](reports/WK8_HealthConnect_Stakeholder_Presentation_Nancy_Lee_YIMBERE_ALAPINI.pdf)
+
+### Stakeholder Presentation — PowerPoint
+
+[Download Week 8 Stakeholder Presentation](reports/WK8_HealthConnect_Stakeholder_Presentation_Nancy_Lee_YIMBERE_ALAPINI.pptx)
+
+### Week 7 Testing & Validation Evidence Pack
+
 [Download Week 7 Testing & Validation Evidence Pack](analysis/WK7_HealthConnect_Testing_Validation_Evidence_Pack_Nancy_Lee_YIMBERE_ALAPINI.xlsx)
 
-### Power BI Dashboard
-[Download Week 7 Power BI Dashboard](dashboards/WK7_HealthConnect_Analytics_Dashboard_Nancy_Lee_YIMBERE_ALAPINI.pbix)
-
-### HC-POD Cross-Track Evidence
-[View Week 7 HC-POD Cross-Track Evidence](reports/WK7_HealthConnect_HC-POD_Cross-Track_Evidence_Nancy_Lee_YIMBERE_ALAPINI.pdf)
-
 ### Data Analytics × Data Science Collaborative Evidence
+
 [View DA × DS Cross-Track Testing & Validation Evidence](notebooks/WK7_HealthConnect_DA_DS_Cross-Track_Testing_Validation_Evidence.pdf)
 
 ---
 
 # Project Continuity
 
-The HealthConnect project follows a progressive analytical workflow.
+The HealthConnect project follows a progressive analytical and decision-support workflow.
 
-### Week 4 — Analytical Foundation
+## Week 4 — Analytical Foundation
 
 **UNDERSTAND → REVIEW → DEFINE → PLAN**
 
 Business understanding, dataset review, data-quality assessment, analytical questions, hypotheses and initial KPI framework.
 
-### Week 5 — Analysis & Initial Implementation
+## Week 5 — Analysis & Initial Implementation
 
 **PREPARE → ANALYSE → VALIDATE → MONITOR → DIAGNOSE → PRIORITIZE**
 
 Data preparation, exploratory data analysis, KPI development, statistical validation, Power BI dashboard development and initial decision-support recommendations.
 
-### Week 6 — Advanced Analytics & Decision Support
+## Week 6 — Advanced Analytics & Decision Support
 
 **SELECT → DEEPEN → VALIDATE → INTEGRATE → DECIDE → PREPARE TO TEST**
 
 Week 6 strengthened the analytical evidence hierarchy through robustness analysis, combined-signal analysis, multivariable modelling, Data Analytics × Data Science integration, measurable recommendation design and decision-support refinement.
 
-### Week 7 — Testing, Refinement & End-to-End Validation
+## Week 7 — Testing, Refinement & End-to-End Validation
 
 **REVIEW → TEST → COMPARE → VALIDATE → REFINE → RE-TEST → DOCUMENT**
 
@@ -87,7 +114,25 @@ The focus was to determine whether the Week 6 outputs were:
 - aligned with evidence strength;
 - useful for operational decision support;
 - consistent with Data Science findings;
-- ready for Week 8 integration.
+- ready for final integration.
+
+## Week 8 — Final Integration & Decision Support
+
+**CONSOLIDATE → INTEGRATE → COMMUNICATE → RECOMMEND → MEASURE → DECIDE**
+
+Week 8 did not reopen validated Week 7 findings without new evidence.
+
+It consolidated the validated analytical solution into a final stakeholder-oriented package by:
+
+- preserving validated KPI definitions;
+- preserving the final analytical evidence hierarchy;
+- integrating validated Data Analytics × Data Science decisions;
+- translating findings into a concise decision-support story;
+- formalising the Test & Measure strategy;
+- documenting final integration readiness;
+- documenting the Project Management integration attempt and its boundary;
+- preparing the final stakeholder presentation;
+- maintaining consistency across dashboard, reports, evidence packs, GitHub and presentation materials.
 
 ---
 
@@ -239,7 +284,7 @@ The Week 6 workflow was:
 
 No additional KPI was introduced simply because a variable showed statistical differentiation.
 
-> A metric becomes a management KPI only when it is connected to a decision, action or process that needs to be monitored.
+> **A metric becomes a management KPI only when it is connected to a decision, action or process that needs to be monitored.**
 
 ---
 
@@ -322,7 +367,7 @@ The objective was to verify that:
 - findings remained robust under additional testing;
 - recommendations remained proportional to evidence strength;
 - Analytics-informed modelling decisions could withstand Data Science testing;
-- the overall solution was ready for Week 8 integration.
+- the overall solution was ready for final integration.
 
 ### Week 7 Validation Chain
 
@@ -462,7 +507,7 @@ The evidence did **not** support introducing a separate Follow-up-specific analy
 
 ---
 
-# Final Week 7 Evidence Hierarchy
+# Final Analytical Evidence Hierarchy
 
 ## PRIMARY SIGNAL
 
@@ -549,13 +594,15 @@ The dashboard was then retested.
 
 ---
 
-# Week 7 Power BI Decision-Support Dashboard
+# Final Power BI Decision-Support Dashboard
+
+The validated Week 7 dashboard was carried forward into Week 8 without reopening the analytical design because no new evidence required modification.
 
 ## 01 | MONITOR — Performance Overview
 
 **Purpose:** Monitor overall appointment outcomes and reminder-process coverage while allowing operational exploration.
 
-![HealthConnect Week 7 Monitor Dashboard](assets/week7/WK7_HealthConnect_Dashboard_01_MONITOR_Performance_Overview.png)
+![HealthConnect Monitor Dashboard](assets/week7/WK7_HealthConnect_Dashboard_01_MONITOR_Performance_Overview.png)
 
 ### Core Metrics
 
@@ -574,7 +621,7 @@ The dashboard was then retested.
 
 **Purpose:** Identify which factors meaningfully differentiate observed No-Show Rates.
 
-![HealthConnect Week 7 Diagnose Dashboard](assets/week7/WK7_HealthConnect_Dashboard_02_DIAGNOSE_No-Show_Differentiation.png)
+![HealthConnect Diagnose Dashboard](assets/week7/WK7_HealthConnect_Dashboard_02_DIAGNOSE_No-Show_Differentiation.png)
 
 ### Diagnostic Conclusion
 
@@ -594,7 +641,7 @@ Other examined factors show weaker or limited standalone decision value.
 
 **Purpose:** Translate validated analytical evidence into actionable attendance-support priorities.
 
-![HealthConnect Week 7 Prioritize Dashboard](assets/week7/WK7_HealthConnect_Dashboard_03_PRIORITIZE_Attention_Priorities.png)
+![HealthConnect Prioritize Dashboard](assets/week7/WK7_HealthConnect_Dashboard_03_PRIORITIZE_Attention_Priorities.png)
 
 ### Priority Framework
 
@@ -648,7 +695,7 @@ Week 7 moved the Analytics × Data Science collaboration from integration to **c
 
 The cross-track dependency was:
 
-> Validate Analytics findings that influence model features or modelling decisions.
+> **Validate Analytics findings that influence model features or modelling decisions.**
 
 Two explicit testing questions were submitted to Data Science.
 
@@ -733,28 +780,378 @@ Conversely, feature importance or model usage does not automatically establish u
 
 ---
 
-# Week 7 Updated Business Insights
+# Week 7 End-to-End Validation
 
-Week 7 validation confirmed that Booking Lead Time remains HealthConnect's strongest standalone analytical differentiation of No-Show behaviour, while Recorded Previous No-Shows provides complementary prioritisation information.
+The Analytics solution was validated across the full decision-support chain:
 
-The combined evidence supports **group-level prioritisation for further attendance-support evaluation**, rather than deterministic individual prediction.
+**DATA → POPULATION → KPI → ANALYTICAL FINDINGS → EVIDENCE HIERARCHY → BUSINESS INSIGHTS → DECISION SUPPORT → DASHBOARD → RECOMMENDATIONS → CROSS-TRACK VALIDATION → WEEK 8 READINESS**
 
-Reminder Status and Distance remain secondary or contextual factors and do not independently justify operational targeting.
+| Validation Layer | Result |
+|---|---|
+| Data → Population | **PASS** |
+| Population → KPI | **PASS** |
+| KPI → Findings | **PASS** |
+| Findings → Evidence Hierarchy | **PASS** |
+| Evidence → Business Insights | **PASS** |
+| Insights → Decision Support | **PASS** |
+| Decision Support → Dashboard | **PASS** |
+| Dashboard → Recommendations | **PASS** |
+| Recommendations → Evaluation Cycle | **PASS** |
+| Analytics → Data Science | **PASS** |
+| Cross-Track → Solution Refinement | **PASS** |
+| Guardrails & Interpretation | **PASS** |
 
-Robustness testing further showed that the Lead-Time pattern persists across Appointment Types without establishing a distinct Appointment-Type interaction.
+### End-to-End Outcome
 
-Cross-track testing strengthened this interpretation by showing that:
-
-- `long_lead_followup` did not provide meaningful incremental predictive value and could be removed;
-- Distance could remain useful inside a multivariable predictive model despite weak standalone Analytics differentiation.
+> **No critical unresolved Analytics inconsistency was identified.**
 
 ---
 
-# Week 7 Updated Recommendations
+# WEEK 8 — FINAL INTEGRATION & DECISION SUPPORT
+
+## Week 8 Objective
+
+Week 8 moved the HealthConnect Data Analytics workstream from validated analytical readiness to final stakeholder-oriented decision support.
+
+No new analysis was introduced merely to create additional findings.
+
+Instead, Week 8 consolidated the validated Week 7 evidence into a final package designed to answer:
+
+> **Where should HealthConnect begin if it wants to evaluate an attendance-support action, and how should it determine whether that action works?**
+
+The final Analytics contribution therefore connects:
+
+**WHAT? → SO WHAT? → NOW WHAT?**
+
+and preserves traceability through:
+
+**Business Question → Evidence → Insight → Recommendation → Monitoring → Decision**
+
+---
+
+# Week 8 Final Analytics & Decision Support Package
+
+The final Data Analytics package contains:
+
+1. final analytical dashboard / report;
+2. final KPI framework;
+3. validated findings;
+4. key visualisations;
+5. business insights;
+6. actionable recommendations;
+7. analytical limitations and guardrails;
+8. cross-track collaboration evidence;
+9. concise executive summary;
+10. stakeholder presentation materials.
+
+Week 8 uses the validated Week 7 analytical evidence rather than reopening completed tests without new contradictory evidence.
+
+---
+
+# Week 8 Decision Question
+
+The final stakeholder-oriented question is:
+
+> **Where should HealthConnect start if it wants to test attendance support — and how should success be measured?**
+
+The answer is structured as a decision sequence rather than a list of correlations.
+
+---
+
+# Week 8 Finding 1 — PRIORITISE
+
+## Longer Booking Lead Times
+
+Booking Lead Time remains the strongest standalone differentiation in observed No-Show Rates.
+
+| Booking Lead Time | No-Show Rate |
+|---|---:|
+| 0–7 days | **29.47%** |
+| 8–14 days | **35.19%** |
+| 15–30 days | **45.53%** |
+| 31–45 days | **57.03%** |
+| 46–60 days | **71.36%** |
+
+Consolidated:
+
+- **0–30 days:** 39.13%
+- **31–60 days:** 63.95%
+- **Observed gap:** **+24.82 pp**
+
+### Decision Implication
+
+> **Start attendance-support evaluation with longer-lead appointments.**
+
+![Week 8 Booking Lead Time Finding](assets/week8/WK8_HealthConnect_01_Booking_Lead_Time_Finding.png)
+
+The evidence supports prioritisation for evaluation.
+
+It does not establish that longer booking lead time causes missed appointments.
+
+---
+
+# Week 8 Finding 2 — REFINE
+
+## Recorded Previous No-Shows as Complementary Information
+
+Recorded Previous No-Shows adds complementary differentiation.
+
+The combined Lead Time × Previous No-Show view provides a more useful decision-support structure than treating recorded history as an independent targeting rule.
+
+| Appointment Group | No-Show Rate | n |
+|---|---:|---:|
+| 0–30 days · Previous NS = 0 | **34.52%** | **1,428** |
+| 0–30 days · Previous NS ≥ 1 | **45.62%** | **1,015** |
+| 31–60 days · Previous NS = 0 | **59.07%** | **1,317** |
+| 31–60 days · Previous NS ≥ 1 | **70.52%** | **977** |
+
+### Decision Implication
+
+> **Lead Time sets the priority. Recorded history refines it.**
+
+![Week 8 Priority Refinement](assets/week8/WK8_HealthConnect_02_Priority_Refinement.png)
+
+These are observed appointment groups.
+
+They are **not individual risk predictions**.
+
+---
+
+# Week 8 Decision Support Framework
+
+The final recommendation is not immediate organisation-wide deployment.
+
+The evidence supports a **test-and-measure strategy**.
+
+## 1 | PRIORITISE
+
+Start with **longer Booking Lead Time** appointment groups.
+
+## 2 | REFINE
+
+Use **Recorded Previous No-Shows** cautiously as complementary group-level information.
+
+## 3 | TEST
+
+Evaluate an attendance-support intervention such as:
+
+- reminder support;
+- confirmation;
+- or another operational attendance-support action.
+
+## 4 | MEASURE
+
+Define before the test:
+
+- target population;
+- intervention;
+- reference comparison;
+- monitoring KPI;
+- evaluation period;
+- decision rule.
+
+Primary monitoring KPI:
+
+> **No-Show Rate within the evaluated population**
+
+## 5 | DECIDE
+
+Use measured evidence to determine whether to:
+
+**EXTEND → ADJUST → STOP**
+
+![Week 8 Decision Framework](assets/week8/WK8_HealthConnect_03_Decision_Framework.png)
+
+### Final Decision Principle
+
+> **The analysis identifies where evaluation should begin. It does not claim that the intervention will work before the intervention is tested.**
+
+---
+
+# Week 8 Cross-Track Integration
+
+## Data Analytics × Data Science — COMPLETED
+
+The Week 7 DA × DS collaboration remained part of the final Week 8 solution.
+
+Two Analytics-informed modelling questions had already produced validated feature decisions.
+
+### `long_lead_followup`
+
+**Final decision: REMOVED**
+
+No meaningful incremental out-of-sample predictive value was demonstrated.
+
+### `distance_to_clinic_km`
+
+**Final decision: RETAINED IN MODEL**
+
+Distance showed modest but more consistent multivariable contribution despite weak standalone Analytics differentiation.
+
+### Final Cross-Track Boundary
+
+> **Analytics evidence ≠ Predictive contribution ≠ Causality**
+
+This distinction is preserved in the final Week 8 presentation and decision-support package.
+
+---
+
+# Week 8 Project Management Integration
+
+Data Analytics formally initiated Project Management integration for Week 8.
+
+The Analytics workstream provided a structured handoff containing:
+
+- validated KPI definitions;
+- final analytical findings;
+- evidence hierarchy;
+- dashboard contribution;
+- business recommendations;
+- analytical limitations;
+- DA × DS integration evidence;
+- requested presentation and integration inputs.
+
+Integration was requested through:
+
+- the official HC-POD 01 communication channel;
+- direct communication with the Project Manager.
+
+The requested Project Management inputs included:
+
+- final walkthrough structure;
+- expected role of Analytics in the integrated presentation;
+- findings or visuals required for project-level decisions;
+- additional integration needs.
+
+### Final PM Status
+
+> **No Project Management feedback was received before finalisation.**
+
+Therefore:
+
+> **Data Analytics → Project Management integration was initiated and documented, but completed PM integration or PM validation is not claimed.**
+
+This boundary is intentional.
+
+The absence of PM feedback does not invalidate or reopen the Analytics evidence already tested and validated in Week 7.
+
+The final Analytics deliverables were therefore completed using the validated evidence available at the time of finalisation.
+
+---
+
+# Week 8 Stakeholder Communication
+
+The final stakeholder presentation was designed around business decisions rather than analytical tooling.
+
+The presentation storyline is:
+
+**PROBLEM**
+
+51.15% overall observed No-Show Rate
+
+↓
+
+**PRIORITISE**
+
+Booking Lead Time
+
+↓
+
+**REFINE**
+
+Recorded Previous No-Shows
+
+↓
+
+**TEST**
+
+Attendance support
+
+↓
+
+**MEASURE**
+
+No-Show Rate
+
+↓
+
+**DECIDE**
+
+Extend · Adjust · Stop
+
+The stakeholder presentation intentionally limits methodological detail and focuses on:
+
+- the business problem;
+- the decision question;
+- the strongest evidence;
+- the decision implication;
+- cross-track refinement;
+- analytical limitations;
+- actionable next steps.
+
+---
+
+# Final Business Insights
+
+## Insight 1 — Booking Lead Time provides the clearest starting point
+
+The observed No-Show Rate rises materially across Booking Lead Time groups.
+
+The consolidated **+24.82 pp** gap between 0–30 and 31–60 days makes Lead Time the strongest validated standalone prioritisation signal.
+
+### So What?
+
+HealthConnect has a defensible group-level starting point for attendance-support evaluation.
+
+---
+
+## Insight 2 — Recorded Previous No-Shows improves refinement, not certainty
+
+Recorded Previous No-Shows provides additional differentiation within Lead-Time groups.
+
+### So What?
+
+It can refine evaluation populations but should not become a deterministic patient-level risk label.
+
+---
+
+## Insight 3 — Weak standalone evidence can still have multivariable value
+
+Distance to Clinic remains weak as a standalone Analytics signal but was retained by Data Science after multivariable testing.
+
+### So What?
+
+Standalone descriptive relevance and predictive model contribution must remain conceptually distinct.
+
+---
+
+## Insight 4 — An observed difference is not yet an intervention effect
+
+Reminder Status shows only limited observational differentiation.
+
+### So What?
+
+HealthConnect should test attendance-support interventions rather than infer effectiveness from existing observational reminder exposure.
+
+---
+
+## Insight 5 — The decision does not end with prioritisation
+
+The analytical value lies not only in identifying higher No-Show groups but in establishing how HealthConnect should learn from an intervention.
+
+### So What?
+
+Every action should be linked to:
+
+**Action → KPI → Evaluation → Decision**
+
+---
+
+# Final Recommendations
 
 ## 1 | PRIORITISE — Longer Booking Lead Times
 
-Use longer-lead appointment groups as the primary population for further attendance-support evaluation.
+Use longer-lead appointment groups as the primary population for attendance-support evaluation.
 
 **Monitoring KPI:** No-Show Rate within the evaluated longer-lead population.
 
@@ -764,6 +1161,8 @@ Use longer-lead appointment groups as the primary population for further attenda
 
 Use Recorded Previous No-Shows cautiously as complementary information when refining the population selected for evaluation.
 
+Do not use the variable as a deterministic individual risk label.
+
 **Monitoring KPI:** No-Show Rate by Recorded Previous No-Show status within the evaluated population.
 
 ---
@@ -772,13 +1171,22 @@ Use Recorded Previous No-Shows cautiously as complementary information when refi
 
 Test reminder, confirmation or other attendance-support interventions before wider deployment.
 
-**Evaluation principle:**
+Define:
 
-> Measure improvement relative to a predefined evaluation reference.
+- the target population;
+- intervention;
+- reference comparison;
+- monitoring KPI;
+- evaluation period;
+- decision rule.
 
-### Decision Cycle
+### Evaluation Principle
 
-**VALIDATED EVIDENCE → DECISION → ACTION → MONITORING KPI → EVALUATION → EXTEND / ADJUST / STOP**
+> **Measure improvement relative to a predefined evaluation reference.**
+
+### Final Decision Cycle
+
+**VALIDATED EVIDENCE → PRIORITISE → REFINE → TEST → MONITOR → EVALUATE → EXTEND / ADJUST / STOP**
 
 ---
 
@@ -834,36 +1242,15 @@ The decision-support framework identifies appointment groups for support and tes
 
 It does not classify individual patients as certain future no-shows.
 
----
+## Integration Attempt ≠ Completed Integration
 
-# Week 7 End-to-End Validation
+Providing an Analytics handoff and requesting PM input documents an integration attempt.
 
-The final Analytics solution was validated across the full decision-support chain:
-
-**DATA → POPULATION → KPI → ANALYTICAL FINDINGS → EVIDENCE HIERARCHY → BUSINESS INSIGHTS → DECISION SUPPORT → DASHBOARD → RECOMMENDATIONS → CROSS-TRACK VALIDATION → WEEK 8 READINESS**
-
-| Validation Layer | Result |
-|---|---|
-| Data → Population | **PASS** |
-| Population → KPI | **PASS** |
-| KPI → Findings | **PASS** |
-| Findings → Evidence Hierarchy | **PASS** |
-| Evidence → Business Insights | **PASS** |
-| Insights → Decision Support | **PASS** |
-| Decision Support → Dashboard | **PASS** |
-| Dashboard → Recommendations | **PASS** |
-| Recommendations → Evaluation Cycle | **PASS** |
-| Analytics → Data Science | **PASS** |
-| Cross-Track → Solution Refinement | **PASS** |
-| Guardrails & Interpretation | **PASS** |
-
-### End-to-End Outcome
-
-> **No critical unresolved Analytics inconsistency was identified.**
+It does not establish completed Project Management integration or validation when no response was received.
 
 ---
 
-# Assumptions, Limitations & Remaining Risks
+# Assumptions, Limitations & Remaining Uncertainty
 
 ## Analytical Unit
 
@@ -899,63 +1286,93 @@ The Power BI file remains editable.
 
 Validated page behaviour and interpretation guidance should therefore be preserved during future implementation.
 
----
+## Financial Impact
 
-# Week 8 Readiness
-
-Following Week 7 testing, refinement, retesting and cross-track validation, the HealthConnect Data Analytics workstream is ready for Week 8 integration.
-
-## What is now validated?
-
-- core KPI definitions and denominators;
-- analytical evidence hierarchy;
-- Booking Lead Time as the primary standalone signal;
-- Recorded Previous No-Shows as complementary evidence;
-- secondary/contextual classification of Reminder Status and Distance;
-- combined-signal decision-support framework;
-- Power BI values and page architecture;
-- dashboard interaction guidance;
-- business insights;
-- recommendations;
-- monitoring and evaluation cycle;
-- Analytics × Data Science interpretation;
-- removal of `long_lead_followup`;
-- retention of Distance in the multivariable model.
-
-## What remains uncertain?
-
-Primarily:
-
-- intervention effectiveness;
-- longitudinal patient-history reliability;
-- interpretation of sparse extreme segments;
-- causal mechanisms beyond the observed associations.
-
-## What must be completed before final integration and presentation?
-
-- preserve the validated evidence hierarchy;
-- preserve non-causal and non-deterministic guardrails;
-- integrate Analytics and Data Science without conflating their evidence types;
-- maintain Test & Measure for attendance-support interventions;
-- carry forward documented limitations;
-- maintain consistency across final reports, dashboard, evidence packs, GitHub and presentation.
-
-### Week 8 Readiness Status
-
-> **DATA ANALYTICS READY FOR WEEK 8 INTEGRATION**
-
-No unresolved Week 7 Data Analytics → Data Science testing dependency remains.
+No financial impact is claimed because no validated cost or revenue assumptions were available to support such quantification.
 
 ---
 
-# Week 7 Deliverables
+# Final End-to-End Decision Chain
+
+The completed Analytics solution now connects the full decision-support chain:
+
+**DATA**
+
+↓
+
+**VALIDATED ANALYTICAL POPULATION**
+
+↓
+
+**KPI**
+
+↓
+
+**ANALYTICAL FINDINGS**
+
+↓
+
+**EVIDENCE HIERARCHY**
+
+↓
+
+**BUSINESS INSIGHT**
+
+↓
+
+**PRIORITISATION**
+
+↓
+
+**CROSS-TRACK VALIDATION**
+
+↓
+
+**ACTION DESIGN**
+
+↓
+
+**MONITORING KPI**
+
+↓
+
+**EVALUATION**
+
+↓
+
+**DECISION**
+
+### Final Decision Intelligence Principle
+
+> **Business Question → Evidence → Insight → Recommendation → Action → Monitoring → Decision**
+
+The dashboard is therefore not treated as the final analytical product.
+
+It is one component of a broader decision-support system.
+
+---
+
+# Week 8 Final Deliverables
+
+| Deliverable | Access |
+|---|---|
+| Final Analytics & Decision Support Report | [Open PDF](reports/WK8_HealthConnect_Final_Analytics_Decision_Support_Report_Nancy_Lee_YIMBERE_ALAPINI.pdf) |
+| Executive Summary | [Open PDF](reports/WK8_HealthConnect_Executive_Summary_Nancy_Lee_YIMBERE_ALAPINI.pdf) |
+| Final Integration Readiness Evidence | [Open PDF](reports/WK8_HealthConnect_Integration_Readiness_Evidence_Nancy_Lee_YIMBERE_ALAPINI.pdf) |
+| Final Power BI Dashboard | [Download PBIX](dashboards/WK8_HealthConnect_Analytics_Dashboard_Nancy_Lee_YIMBERE_ALAPINI.pbix) |
+| Stakeholder Presentation | [Open PDF](reports/WK8_HealthConnect_Stakeholder_Presentation_Nancy_Lee_YIMBERE_ALAPINI.pdf) |
+| Stakeholder Presentation Source | [Download PPTX](reports/WK8_HealthConnect_Stakeholder_Presentation_Nancy_Lee_YIMBERE_ALAPINI.pptx) |
+
+---
+
+# Week 7 Validation Evidence
 
 | Deliverable | Access |
 |---|---|
 | Analytics Testing & Refinement Report | [Open PDF](reports/WK7_HealthConnect_Analytics_Testing_Refinement_Report_Nancy_Lee_YIMBERE_ALAPINI.pdf) |
 | Week 7 Project Summary | [Open PDF](reports/WK7_HealthConnect_Project_Summary_Nancy_Lee_YIMBERE_ALAPINI.pdf) |
 | Testing & Validation Evidence Pack | [Download Excel](analysis/WK7_HealthConnect_Testing_Validation_Evidence_Pack_Nancy_Lee_YIMBERE_ALAPINI.xlsx) |
-| Power BI Dashboard | [Download PBIX](dashboards/WK7_HealthConnect_Analytics_Dashboard_Nancy_Lee_YIMBERE_ALAPINI.pbix) |
+| Week 7 Power BI Dashboard | [Download PBIX](dashboards/WK7_HealthConnect_Analytics_Dashboard_Nancy_Lee_YIMBERE_ALAPINI.pbix) |
 | HC-POD Cross-Track Evidence | [Open PDF](reports/WK7_HealthConnect_HC-POD_Cross-Track_Evidence_Nancy_Lee_YIMBERE_ALAPINI.pdf) |
 | DA × DS Cross-Track Testing Evidence | [Open PDF](notebooks/WK7_HealthConnect_DA_DS_Cross-Track_Testing_Validation_Evidence.pdf) |
 
@@ -963,73 +1380,127 @@ No unresolved Week 7 Data Analytics → Data Science testing dependency remains.
 
 # Repository Structure
 
-    healthconnect-experience-lab/
-    │
-    ├── analysis/
-    │   └── WK7_HealthConnect_Testing_Validation_Evidence_Pack_Nancy_Lee_YIMBERE_ALAPINI.xlsx
-    │
-    ├── assets/
-    │   └── week7/
-    │       ├── WK7_HealthConnect_Dashboard_01_MONITOR_Performance_Overview.png
-    │       ├── WK7_HealthConnect_Dashboard_02_DIAGNOSE_No-Show_Differentiation.png
-    │       └── WK7_HealthConnect_Dashboard_03_PRIORITIZE_Attention_Priorities.png
-    │
-    ├── dashboards/
-    │   └── WK7_HealthConnect_Analytics_Dashboard_Nancy_Lee_YIMBERE_ALAPINI.pbix
-    │
-    ├── notebooks/
-    │   └── WK7_HealthConnect_DA_DS_Cross-Track_Testing_Validation_Evidence.pdf
-    │
-    ├── reports/
-    │   ├── WK7_HealthConnect_Analytics_Testing_Refinement_Report_Nancy_Lee_YIMBERE_ALAPINI.pdf
-    │   ├── WK7_HealthConnect_HC-POD_Cross-Track_Evidence_Nancy_Lee_YIMBERE_ALAPINI.pdf
-    │   └── WK7_HealthConnect_Project_Summary_Nancy_Lee_YIMBERE_ALAPINI.pdf
-    │
-    └── README.md
+```text
+healthconnect-experience-lab/
+│
+├── analysis/
+│   └── WK7_HealthConnect_Testing_Validation_Evidence_Pack_Nancy_Lee_YIMBERE_ALAPINI.xlsx
+│
+├── assets/
+│   ├── week7/
+│   │   ├── WK7_HealthConnect_Dashboard_01_MONITOR_Performance_Overview.png
+│   │   ├── WK7_HealthConnect_Dashboard_02_DIAGNOSE_No-Show_Differentiation.png
+│   │   └── WK7_HealthConnect_Dashboard_03_PRIORITIZE_Attention_Priorities.png
+│   │
+│   └── week8/
+│       ├── WK8_HealthConnect_00_Healthcare_Appointment_Icon.png
+│       ├── WK8_HealthConnect_01_Booking_Lead_Time_Finding.png
+│       ├── WK8_HealthConnect_02_Priority_Refinement.png
+│       └── WK8_HealthConnect_03_Decision_Framework.png
+│
+├── dashboards/
+│   ├── WK7_HealthConnect_Analytics_Dashboard_Nancy_Lee_YIMBERE_ALAPINI.pbix
+│   └── WK8_HealthConnect_Analytics_Dashboard_Nancy_Lee_YIMBERE_ALAPINI.pbix
+│
+├── notebooks/
+│   └── WK7_HealthConnect_DA_DS_Cross-Track_Testing_Validation_Evidence.pdf
+│
+├── reports/
+│   ├── WK7_HealthConnect_Analytics_Testing_Refinement_Report_Nancy_Lee_YIMBERE_ALAPINI.pdf
+│   ├── WK7_HealthConnect_HC-POD_Cross-Track_Evidence_Nancy_Lee_YIMBERE_ALAPINI.pdf
+│   ├── WK7_HealthConnect_Project_Summary_Nancy_Lee_YIMBERE_ALAPINI.pdf
+│   ├── WK8_HealthConnect_Executive_Summary_Nancy_Lee_YIMBERE_ALAPINI.pdf
+│   ├── WK8_HealthConnect_Final_Analytics_Decision_Support_Report_Nancy_Lee_YIMBERE_ALAPINI.pdf
+│   ├── WK8_HealthConnect_Integration_Readiness_Evidence_Nancy_Lee_YIMBERE_ALAPINI.pdf
+│   ├── WK8_HealthConnect_Stakeholder_Presentation_Nancy_Lee_YIMBERE_ALAPINI.pdf
+│   └── WK8_HealthConnect_Stakeholder_Presentation_Nancy_Lee_YIMBERE_ALAPINI.pptx
+│
+└── README.md
+```
 
 ---
 
-# Week 7 Final Validation Status
+# Final Project Validation Status
 
-**14 Analytics tests completed**
+| Component | Final Status |
+|---|---|
+| Business understanding | **COMPLETED** |
+| Data-quality assessment | **COMPLETED** |
+| Analytical population definition | **VALIDATED** |
+| KPI framework | **VALIDATED** |
+| Analytical evidence hierarchy | **VALIDATED** |
+| 14 Analytics tests | **COMPLETED** |
+| Dashboard testing & refinement | **VALIDATED** |
+| Decision-support recommendations | **VALIDATED** |
+| Data Analytics × Data Science collaboration | **COMPLETED & VALIDATED** |
+| `long_lead_followup` decision | **REMOVED** |
+| `distance_to_clinic_km` decision | **RETAINED IN MODEL** |
+| Week 7 end-to-end Analytics validation | **PASS** |
+| Final Analytics & Decision Support Package | **COMPLETED** |
+| Executive Summary | **COMPLETED** |
+| Final Integration Readiness Evidence | **COMPLETED** |
+| Stakeholder Presentation | **COMPLETED** |
+| Data Analytics → Project Management integration | **INITIATED & DOCUMENTED — NO PM FEEDBACK RECEIVED BEFORE FINALISATION** |
 
-**Core KPIs revalidated**
+---
+
+# Final Project Outcome
+
+The HealthConnect Data Analytics workstream progressed from initial business understanding to a validated and decision-oriented analytical solution.
+
+The final evidence supports three practical conclusions:
+
+### 1. PRIORITISE
+
+**Longer Booking Lead Times** provide the strongest standalone starting point for attendance-support evaluation.
+
+### 2. REFINE
+
+**Recorded Previous No-Shows** can provide complementary group-level information when refining the evaluation population.
+
+### 3. TEST & MEASURE
+
+Attendance-support interventions should be evaluated before wider deployment.
+
+The final decision cycle is:
+
+> **PRIORITISE → REFINE → TEST → MEASURE → EXTEND / ADJUST / STOP**
+
+The value of the analysis therefore lies not only in identifying where No-Show Rates are higher.
+
+It lies in helping HealthConnect determine:
+
+> **where to act first, what evidence supports that choice, how to measure the result, and how to decide what to do next.**
+
+---
+
+# Final Status
+
+**Weeks 4–8 completed**
+
+**Core KPIs validated**
 
 **Analytical evidence hierarchy validated**
 
-**Dashboard interpretation issue identified, refined and retested**
+**14 Analytics tests completed**
 
-**Recommendations refined and validated**
+**Dashboard refined, retested and validated**
 
-**Meaningful Data Analytics × Data Science testing completed**
+**Data Analytics × Data Science testing completed**
 
-**Cross-track feature decisions implemented**
+**Cross-track modelling decisions implemented**
 
-**End-to-end Analytics validation completed**
+**Decision-support framework completed**
 
-**No critical unresolved Analytics inconsistency identified**
+**Final Analytics package completed**
 
-**No open Week 7 Analytics → Data Science testing dependency**
+**Stakeholder presentation completed**
 
-> **FINAL STATUS: WEEK 7 PASS | READY FOR WEEK 8 INTEGRATION**
+**Project Management integration attempt documented**
 
----
+**No critical unresolved Data Analytics inconsistency identified**
 
-# Week 8 — Final Integration Focus
-
-Week 8 should move from validated analytical and predictive components toward final HealthConnect solution integration.
-
-The priority is not to reopen validated Week 7 findings without evidence.
-
-The focus should be to:
-
-1. integrate validated Analytics and Data Science outputs;
-2. preserve the distinction between descriptive, predictive and causal evidence;
-3. translate validated findings into a coherent final HealthConnect decision-support story;
-4. retain the Test & Measure framework for attendance-support interventions;
-5. maintain traceability from evidence to recommendation;
-6. complete final cross-deliverable quality assurance;
-7. prepare the final integrated presentation.
+> **FINAL STATUS: DATA ANALYTICS WEEK 8 COMPLETED | FINAL DECISION-SUPPORT PACKAGE READY**
 
 ---
 
